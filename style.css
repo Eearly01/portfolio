@@ -1,0 +1,32 @@
+body, html {
+    height: 300vh;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "home" "resume" "aboutMe" "browserGame";
+}
+
+#home {
+    grid-area: home;
+    background-color: brown;
+}
+
+#home-body {
+
+}
+
+#resume-page{
+    grid-area: resume;
+}
+
+#about-me-page {
+    grid-area: aboutMe;
+    background-color: blue;
+}
+
+#browser-game {
+    grid-area: browserGame;
+}
