@@ -40,11 +40,12 @@ body {
     margin: 10px;
 }
 
-#nav-bar {
+.nav-bar {
+    position: relative;
     grid-area: nav-line;
     display: flex;
     align-items: center;
-    position: relative;
+    width: 100%;
     justify-content: space-around;
     background-color: #00796B;
 }
@@ -52,9 +53,7 @@ body {
 .moving-nav {
     position: fixed;
     top: 0;
-    width: 100%;
-    justify-content: space-around;
-    background-color: #00796B;
+    height: 10%;
 }
 
 #resume-container {
