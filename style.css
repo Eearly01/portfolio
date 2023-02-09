@@ -6,7 +6,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-rows: auto;
-    grid-template-areas: "home" "resume" "aboutMe" "browserGame";
+    grid-template-areas: "home" "resume" "aboutMe" "browserGame" "footnote";
 }
 
 #home-container {
@@ -18,7 +18,7 @@ body {
 #home-top {
     display: flex;
     grid-area: top;
-    background-color: aqua;
+    background-color: #73c3bb;
     justify-content: space-around;
     flex-direction: column;
 }
@@ -26,7 +26,8 @@ body {
 .home-body {
     grid-area: bot;
     display: flex;
-    background-color: red;
+    background-color: #B2DFDB;
+    background-image: url(/img/vecteezy_vector-background-with-mountains-nature-mountain-in-green_8277939.jpg);
     justify-content: center;
     align-items: center;
     /* grid-template-columns: 25% auto 25%;
@@ -45,9 +46,16 @@ body {
     align-items: center;
     position: relative;
     justify-content: space-around;
-    background-color: blueviolet;
+    background-color: #00796B;
 }
 
+.moving-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #00796B;
+}
 
 #resume-container {
     grid-area: resume;
@@ -55,7 +63,7 @@ body {
 
 #about-me-container {
     grid-area: aboutMe;
-    background-color: lightblue;
+    background-color: #B2DFDB;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,4 +85,11 @@ body {
 
 #browser-game-container {
     grid-area: browserGame;
+}
+
+#footnote{
+    height: 50px;
+    background-color: antiquewhite;
+    position: fixed;
+    bottom: 0;
 }
