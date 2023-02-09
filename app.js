@@ -10,4 +10,4 @@ document.addEventListener("scroll", function () {
   else {
     navbar.classList.remove("moving-nav");
   }
-}); // help from https://markoskon.com/fixed-navbar-on-top-with-position-sticky/
+}); //https://markoskon.com/fixed-navbar-on-top-with-position-sticky/

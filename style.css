@@ -5,8 +5,8 @@ body, html {
 body {
     margin: 0;
     display: grid;
-    grid-template-rows: auto;
-    grid-template-areas: "home" "resume" "aboutMe" "browserGame" "footnote";
+    grid-template-rows: auto auto auto auto 10px;
+    grid-template-areas: "home" "resume" "aboutMe" "browserGame";
 }
 
 #home-container {
@@ -53,7 +53,7 @@ body {
 .moving-nav {
     position: fixed;
     top: 0;
-    height: 10%;
+    height: 8%;
 }
 
 #resume-container {
@@ -74,21 +74,22 @@ body {
     display: flex;
     flex-direction: column;
     background-color: burlywood;
-    margin: 25px;
+    margin: 2px;
     border-radius: 8px;
-    padding: 50px;
+    padding: 10px;
     min-width: 300px;
-    width: 30%;
-    height: 25%;
+    width: 35%;
+    height: 275px;
 }
 
 #browser-game-container {
     grid-area: browserGame;
+    background-color: orange;
 }
 
 #footnote{
     height: 50px;
     background-color: antiquewhite;
-    position: fixed;
-    bottom: 0;
+    padding-left: 10%;
+
 }
