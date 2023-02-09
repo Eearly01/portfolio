@@ -9,24 +9,52 @@ body {
     grid-template-areas: "home" "resume" "aboutMe" "browserGame";
 }
 
-#home {
+#home-container {
     grid-area: home;
-    background-color: brown;
+    display: grid;
+    grid-template-rows: 25% 10% auto;
+    grid-template-areas: "top" "nav-line" "bot";
+}
+#home-top {
+    grid-area: top;
+    background-color: aqua;
 }
 
-#home-body {
-
+.home-body {
+    grid-area: bot;
+    display: flex;
+    background-color: red;
+    justify-items: center;
+    align-items: center;
+    /* grid-template-columns: 25% auto 25%;
+    grid-template-areas: "left mid right"; */
 }
 
-#resume-page{
+#placeholder {
+    border-radius: 8px;
+    height: 300px;
+    margin: 10px;
+}
+
+#nav-bar {
+    grid-area: nav-line;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+    background-color: blueviolet;
+}
+
+
+#resume-container {
     grid-area: resume;
 }
 
-#about-me-page {
+#about-me-container {
     grid-area: aboutMe;
     background-color: blue;
 }
 
-#browser-game {
+#browser-game-container {
     grid-area: browserGame;
 }
