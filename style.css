@@ -16,15 +16,18 @@ body {
     grid-template-areas: "top" "nav-line" "bot";
 }
 #home-top {
+    display: flex;
     grid-area: top;
     background-color: aqua;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .home-body {
     grid-area: bot;
     display: flex;
     background-color: red;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     /* grid-template-columns: 25% auto 25%;
     grid-template-areas: "left mid right"; */
@@ -52,7 +55,24 @@ body {
 
 #about-me-container {
     grid-area: aboutMe;
-    background-color: blue;
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#abme-block {
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    margin: 25px;
+    border-radius: 8px;
+    padding: 50px;
+    min-width: 300px;
+    width: 30%;
+    height: 25%;
 }
 
 #browser-game-container {
