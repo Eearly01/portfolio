@@ -23,7 +23,7 @@ $(() => {
 
   $('.prev').on('click',function() {
     showSlides(slideIndex -= 1);
-  })
+  })+
 
   function showSlides(n) {
     let i;

@@ -5,7 +5,7 @@ body, html {
 body {
     margin: 0;
     display: grid;
-    grid-template-rows: auto 500px auto auto 10px;
+    grid-template-rows: 110vh 500px auto auto 10px;
     grid-template-areas: "home" "aboutMe" "resume" "browserGame";
 }
 
@@ -70,7 +70,12 @@ body {
 
 #resume-container {
     grid-area: resume;
+    background-image: url('img/181261.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 #about-me-container {
     grid-area: aboutMe;
@@ -99,11 +104,6 @@ body {
     height: 275px;
 }
 
-#resume {
-    justify-content: center;
-    align-content: center;
-
-}
 
 #browser-game-container {
     grid-area: browserGame;
