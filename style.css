@@ -5,8 +5,8 @@ body, html {
 body {
     margin: 0;
     display: grid;
-    grid-template-rows: auto auto 300px auto 10px;
-    grid-template-areas: "home" "resume" "aboutMe" "browserGame";
+    grid-template-rows: auto 500px auto auto 10px;
+    grid-template-areas: "home" "aboutMe" "resume" "browserGame";
 }
 
 #home-container {
@@ -52,6 +52,14 @@ body {
     background-color: #00796B;
 }
 
+.nav-bar a {
+    background-color:#73c3bb;
+    color: black  ;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20%;
+}
+
 .moving-nav {
     position: fixed;
     top: 0;
@@ -70,6 +78,10 @@ body {
     justify-content: center;
     align-items: center;
     
+}
+
+#about-me-container h3 {
+    align-self: flex-start;
 }
 
 #abme-block {
@@ -93,4 +105,60 @@ body {
     background-color: antiquewhite;
     padding-left: 10%;
 
+}
+
+* {
+    box-sizing: border-box
+}
+
+.carousel-containerF, .carousel-containerB {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    display:none;
+}
+
+.carousel {
+    display: none;
+}
+
+.carousel img {
+    width: 300px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#text {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
