@@ -99,6 +99,12 @@ body {
     height: 275px;
 }
 
+#resume {
+    justify-content: center;
+    align-content: center;
+
+}
+
 #browser-game-container {
     grid-area: browserGame;
     background-color: orange;
