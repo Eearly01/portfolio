@@ -1,11 +1,11 @@
 body, html {
-    height: 300vh;
+    /* height: 300vh; */
 }
 
 body {
     margin: 0;
     display: grid;
-    grid-template-rows: 110vh 500px auto auto 10px;
+    grid-template-rows: 110vh 500px auto 60vh 10px;
     grid-template-areas: "home" "aboutMe" "resume" "browserGame";
 }
 
@@ -104,19 +104,6 @@ body {
     height: 275px;
 }
 
-
-#browser-game-container {
-    grid-area: browserGame;
-    background-color: orange;
-}
-
-#footnote{
-    height: 50px;
-    background-color: antiquewhite;
-    padding-left: 10%;
-
-}
-
 * {
     box-sizing: border-box
 }
@@ -171,4 +158,35 @@ body {
     bottom: 8px;
     width: 100%;
     text-align: center;
+}
+
+#browser-game-container {
+    grid-area: browserGame;
+    background-color:#1e6792;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+#bg-sidebar {
+    width: 100px;
+    position:absolute;
+    margin:20px 75% auto auto;
+}
+
+#game {
+    display: flex;
+    background-color: #53b5db;
+    height: 400px;
+    width: 400px;
+    margin-top: 25px;
+    
+}
+
+#footnote {
+    height: 50px;
+    background-color: antiquewhite;
+    padding-left: 10%;
+
 }
