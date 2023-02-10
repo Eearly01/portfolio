@@ -18,7 +18,7 @@ body {
 #home-top {
     display: flex;
     grid-area: top;
-    background-color: #73c3bb;
+    background-color: #53b5db;
     flex-direction: column;
 }
 
@@ -30,9 +30,11 @@ body {
     grid-area: bot;
     display: flex;
     background-color: #B2DFDB;
-    background-image: url(/img/vecteezy_vector-background-with-mountains-nature-mountain-in-green_8277939.jpg);
+    background-image: url(/img/18.jpg);
+    background-size: cover;
     justify-content: center;
     align-items: center;
+    color:aliceblue;
 }
 
 #placeholder {
@@ -72,7 +74,8 @@ body {
 
 #about-me-container {
     grid-area: aboutMe;
-    background-color: #B2DFDB;
+    color:aliceblue;
+    background-color: #1e6792;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,6 +90,7 @@ body {
 #abme-block {
     display: flex;
     flex-direction: column;
+    color:#00796B;
     background-color: lightblue;
     margin: 2px;
     border-radius: 8px;
