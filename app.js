@@ -1,4 +1,5 @@
 $(() => {
+  //moves the navbar with you when you scroll through the page
   document.addEventListener("scroll", function () {
     const navbar = document.querySelector(".nav-bar");
     const navHeight = 200;
@@ -13,6 +14,8 @@ $(() => {
     }
   }); //https://markoskon.com/fixed-navbar-on-top-with-position-sticky/
 
+
+  //Image slides in the about me page
   let slideIndex = 1;
 
   showSlides(slideIndex);
@@ -39,6 +42,7 @@ $(() => {
 
   }
 
+  //displays or hides the images when the button is pressed in the about me page
   const cContainerF = $(".carousel-containerF");
   const cContainerB = $(".carousel-containerB");
   const $btnF = $("#btnFire");
@@ -67,6 +71,5 @@ $(() => {
 
     }
   });
-
 
 })

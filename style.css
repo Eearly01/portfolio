@@ -1,5 +1,5 @@
 body, html {
-    /* height: 300vh; */
+    font-family: sans-serif;
 }
 
 body {
@@ -15,6 +15,14 @@ body {
     grid-template-rows: 20% 65px auto;
     grid-template-areas: "top" "nav-line" "bot";
 }
+
+.mediaIcons a {
+    transition: all .2s ease-in-out;
+}
+.mediaIcons a:hover {
+    transform: scale(1.1);
+}
+
 #home-top {
     display: flex;
     grid-area: top;
@@ -60,6 +68,11 @@ body {
     text-decoration: none;
     padding: 10px;
     border-radius: 20%;
+    transition: all .2s ease-in-out;
+}
+
+.nav-bar a:hover {
+    transform: scale(1.1);
 }
 
 .moving-nav {
@@ -147,6 +160,13 @@ body {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.grows {
+    transition: all .2s ease-in-out;
+}
+.grows:hover {
+    transform: scale(1.5);
 }
 
 #text {
