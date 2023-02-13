@@ -197,10 +197,10 @@ body {
 
 #game {
     display: flex;
-    background-color: #53b5db;
+    /* background-color: #53b5db;
     height: 400px;
     width: 400px;
-    margin-top: 25px;
+    margin-top: 25px; */
     
 }
 
