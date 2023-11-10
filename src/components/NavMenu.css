@@ -1,0 +1,42 @@
+﻿/* NavMenu.css */
+
+/* Reset some default styles */
+.navbar {
+    background-color: var(--color-primary);
+    transition: var(--transition-all);
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--color-white) !important;
+    font-weight: 500;
+    transition: var(--transition-all);
+}
+
+    .navbar-brand:hover,
+    .nav-link:hover {
+        color: var(--color-secondary) !important;
+    }
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.navbar-toggler {
+    border-color: var(--color-grey-2);
+}
+
+.navbar-nav {
+    font-size: 1.1rem;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
