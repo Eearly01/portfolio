@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+.portfolio {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 80px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero {
+  display: grid;
+  gap: 24px;
+  padding: 48px 36px;
+  background: linear-gradient(180deg, rgba(16, 35, 57, 0.96), rgba(12, 22, 38, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 0.92rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 3.5vw, 4rem);
+  line-height: 1.05;
+  max-width: 840px;
+  color: var(--surface);
+}
+
+.hero .intro {
+  margin: 24px 0 0;
+  max-width: 760px;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.hero-actions {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  transform: translateY(-1px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.section {
+  margin-top: 40px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-tag {
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  margin: 0;
+  color: var(--surface);
+  font-size: 1.76rem;
+  line-height: 1.12;
+}
+
+.summary p,
+.experience-item p,
+.contact p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pill-list li {
+  padding: 10px 16px;
+  background: rgba(77, 208, 225, 0.08);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.98rem;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card h3,
+.experience-item h3 {
+  margin: 0 0 16px;
+  color: var(--surface);
+  font-size: 1.2rem;
+}
+
+.card ul,
+.experience-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.card li,
+.experience-item li {
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.experience-list {
+  display: grid;
+  gap: 24px;
+}
+
+.experience-item {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-item .meta {
+  color: var(--muted);
+  margin: 8px 0 18px;
+  font-size: 0.95rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 18px;
+  background: rgba(77, 208, 225, 0.08);
+  border-radius: 999px;
+}
+
+@media (max-width: 912px) {
+  .grid-list {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero,
+  .section {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-actions,
+  .contact-list {
+    flex-direction: column;
   }
 }
