@@ -1,49 +1,87 @@
 .portfolio {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 32px 0 80px;
+  padding: 32px 0 88px;
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   display: grid;
   gap: 24px;
-  padding: 48px 36px;
-  background: linear-gradient(180deg, rgba(16, 35, 57, 0.96), rgba(12, 22, 38, 0.95));
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 28px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+  padding: 56px 40px;
+  background:
+    radial-gradient(circle at top right, rgba(77, 208, 225, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(15, 28, 47, 0.98), rgba(8, 16, 28, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: auto -100px -120px auto;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(77, 208, 225, 0.08);
+  filter: blur(12px);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
   display: inline-flex;
   margin-bottom: 18px;
   color: var(--accent);
-  font-size: 0.92rem;
-  letter-spacing: 0.18em;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 3.5vw, 4rem);
-  line-height: 1.05;
-  max-width: 840px;
+  max-width: 900px;
   color: var(--surface);
+  font-size: clamp(2.5rem, 4vw, 4.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
 }
 
 .hero .intro {
-  margin: 24px 0 0;
-  max-width: 760px;
+  margin-top: 22px;
+  max-width: 800px;
   color: var(--text);
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   line-height: 1.85;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hero-highlights span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(77, 208, 225, 0.1);
+  border: 1px solid rgba(77, 208, 225, 0.18);
+  color: var(--surface);
+  font-size: 0.95rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
 .button {
@@ -51,47 +89,51 @@
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0 24px;
+  padding: 0 22px;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .primary {
   background: var(--accent);
-  color: var(--bg);
+  color: #07101f;
+  box-shadow: 0 12px 28px rgba(77, 208, 225, 0.18);
 }
 
 .secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
+  color: var(--surface);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .section {
-  margin-top: 40px;
+  margin-top: 36px;
   padding: 32px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .section-header {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 16px;
+  gap: 14px;
   margin-bottom: 20px;
 }
 
 .section-tag {
   color: var(--accent);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
@@ -99,11 +141,13 @@
 .section h2 {
   margin: 0;
   color: var(--surface);
-  font-size: 1.76rem;
+  font-size: 1.8rem;
   line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .summary p,
+.card p,
 .experience-item p,
 .contact p {
   color: var(--text);
@@ -121,11 +165,12 @@
 }
 
 .pill-list li {
-  padding: 10px 16px;
+  padding: 10px 15px;
+  border-radius: 999px;
   background: rgba(77, 208, 225, 0.08);
   color: var(--accent);
-  border-radius: 999px;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(77, 208, 225, 0.1);
 }
 
 .grid-list {
@@ -143,9 +188,10 @@
 
 .card h3,
 .experience-item h3 {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: var(--surface);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  line-height: 1.3;
 }
 
 .card ul,
@@ -159,13 +205,28 @@
 
 .card li,
 .experience-item li {
+  position: relative;
+  padding-left: 18px;
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.72;
+}
+
+.card li::before,
+.experience-item li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.9;
 }
 
 .experience-list {
   display: grid;
-  gap: 24px;
+  gap: 22px;
 }
 
 .experience-item {
@@ -175,26 +236,56 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.experience-item h3 span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .experience-item .meta {
+  margin: 6px 0 16px;
   color: var(--muted);
-  margin: 8px 0 18px;
   font-size: 0.95rem;
+}
+
+.project-card p {
+  margin-bottom: 18px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mini-tag {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--surface);
+  font-size: 0.88rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 20px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .contact-list a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   padding: 12px 18px;
-  background: rgba(77, 208, 225, 0.08);
   border-radius: 999px;
+  background: rgba(77, 208, 225, 0.08);
+  border: 1px solid rgba(77, 208, 225, 0.14);
+}
+
+.contact-list a:hover,
+.button:hover {
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 912px) {
@@ -213,12 +304,21 @@
     width: min(100%, calc(100% - 24px));
   }
 
+  .hero {
+    padding: 32px 22px;
+  }
+
   .hero h1 {
-    font-size: 2.3rem;
+    font-size: 2.35rem;
   }
 
   .hero-actions,
   .contact-list {
     flex-direction: column;
+  }
+
+  .button,
+  .contact-list a {
+    width: 100%;
   }
 }
